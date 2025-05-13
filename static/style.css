@@ -1,0 +1,56 @@
+/* Default Theme (Light Mode using variables) */
+:root {
+  --bg-color: #f4f8fb;
+  --text-color: #333;
+  --heading-color: #2c3e50;
+  --card-bg: #fff;
+  --card-border: #ddd;
+  --btn-primary-bg: #007bff;
+  --btn-primary-border: #007bff;
+  --btn-success-bg: #28a745;
+  --btn-success-border: #28a745;
+  --input-bg: #fff;
+  --input-text: #000;
+  --text-muted-color: #666;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1 {
+  color: var(--heading-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 15px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  border-color: var(--btn-primary-border);
+}
+
+.btn-success {
+  background-color: var(--btn-success-bg);
+  border-color: var(--btn-success-border);
+}
+
+.form-select,
+.form-control {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+}
+
+.text-muted {
+  color: var(--text-muted-color);
+}
