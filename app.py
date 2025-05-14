@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import os
 
-
 app = Flask(__name__)
 
 # โหลดข้อมูล
@@ -15,7 +14,7 @@ else:
     user_feedback_log = pd.DataFrame(columns=['mood', 'track_name', 'artist', 'rating', 'feedback'])
 
 # filters สำหรับ mood
-def recommend_playlist_for_mood(mood, shown_tracks=set(), playlist_size=5):
+def recommend_playlist_for_mood(mood, shown_tracks=set(), playlist_size=6):
     filters = {
         'happy': df[df['valence'] > 0.7],
         'sad': df[df['valence'] < 0.3],
