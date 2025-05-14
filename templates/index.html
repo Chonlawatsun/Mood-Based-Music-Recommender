@@ -68,7 +68,13 @@
                 <div class="card-body">
                   <h5 class="card-title">🎵 ${song.track_name}</h5>
                   <p class="card-text text-muted">by ${song.track_artist}</p>
-                  
+
+                  <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/${song.track_id}"
+                    width="100%" height="80" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media">
+                  </iframe>
+
                   <label for="rate-${song.track_name}" class="form-label">Rate (1–5) ⭐</label>
                   <input type="number" id="rate-${song.track_name}" min="1" max="5" class="form-control mb-2" value="${song.previous_rating || ''}" />
 
